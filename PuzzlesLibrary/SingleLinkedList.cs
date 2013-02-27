@@ -10,7 +10,7 @@ namespace Puzzle1
     /// Represents a strong typed single linked list.
     /// </summary>
     /// <typeparam name="T">The type of elements in the list.</typeparam>
-    public class SingleLinkedList<T>
+    public sealed class SingleLinkedList<T>
     {
 
         #region Subtypes

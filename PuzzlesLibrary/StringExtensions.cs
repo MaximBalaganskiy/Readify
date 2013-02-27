@@ -10,15 +10,22 @@ namespace PuzzlesLibrary
     /// </summary>
     public static class StringExtensions
     {
+
+        #region Constants
+
         /// <summary>
         /// Stores the initial size of the result array. The array gets incremented with this number if the number of words is greater than current array capacity.
         /// </summary>
-        private readonly static int wordsInitialSize = 10;
+        private const int wordsInitialSize = 10;
 
         /// <summary>
         /// Stores the initial size of the word array. The array gets incremented with this number if the number of characters is greater than current array capacity.
         /// </summary>
-        private readonly static int wordInitialSize = 10;
+        private const int wordInitialSize = 10;
+
+        #endregion
+
+        #region Methods
 
         /// <summary>
         /// Splits the given string using the specified separator.
@@ -142,6 +149,7 @@ namespace PuzzlesLibrary
 
             return sb.ToString();
         }
-
+        
+        #endregion
     }
 }

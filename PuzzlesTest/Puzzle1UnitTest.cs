@@ -4,9 +4,16 @@ using Puzzle1;
 
 namespace PuzzlesUnitTest
 {
+    /// <summary>
+    /// Represents the Puzzle1 unit test.
+    /// </summary>
     [TestClass]
     public class Puzzle1UnitTest
     {
+        /// <summary>
+        /// Tests the length of the list after element have been added.
+        /// Tests handling of boundary indexes with different offsets.
+        /// </summary>
         [TestMethod]
         public void ElementAtTest()
         {
@@ -29,6 +36,9 @@ namespace PuzzlesUnitTest
             Assert.AreEqual(2, list.ElementAt(9, SingleLinkedList<int>.Offset.Last));
         }
 
+        /// <summary>
+        /// Tests if calling the function on an empty list raises an exception.
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void EmptyListElementAtTest()
@@ -37,6 +47,9 @@ namespace PuzzlesUnitTest
             list.ElementAt(0, SingleLinkedList<int>.Offset.First);
         }
 
+        /// <summary>
+        /// Tests if calling the function with an out of bounds index raises an exception.
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void OutOfBoundsElementAtTest()
@@ -47,6 +60,9 @@ namespace PuzzlesUnitTest
             list.ElementAt(2, SingleLinkedList<int>.Offset.First);
         }
 
+        /// <summary>
+        /// Tests if calling the function with a negative index raises an exception.
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void NegativeIndexElementAtTest()
