@@ -13,7 +13,7 @@ namespace PuzzlesTest
         [TestMethod]
         public void SplitTest()
         {
-            string str = "  one reeeeeeeeeeeealy long word is not enough so,   i will add more than 10 words to see the result   ";
+            string str = "  one reeeeeeeeeeeealy long word is not enough, so  i will add more than 10 words to see the result   ";
             string[] res = str.PuzzleSplit(' ');
             string[] expected = str.Split(' ');
             CollectionAssert.AreEqual(expected, res);
