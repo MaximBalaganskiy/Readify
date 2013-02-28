@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Puzzle1
 {
@@ -65,6 +61,31 @@ namespace Puzzle1
         /// Stores the number of nodes in the list.
         /// </summary>
         private int _length;
+
+        #endregion
+
+        #region Constructors
+
+        /// <summary>
+        /// Initialises an empty instance of the SingleLinkedList class.
+        /// </summary>
+        public SingleLinkedList()
+        {
+
+        }
+
+        /// <summary>
+        /// Initialises an instance of the SingleLinkedList class with an array of elements.
+        /// </summary>
+        /// <param name="array">The array of elements to add to the list.</param>
+        public SingleLinkedList(T[] array)
+            : this()
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                this.Add(array[i]);
+            }
+        }
 
         #endregion
 
